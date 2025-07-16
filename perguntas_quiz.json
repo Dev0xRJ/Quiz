@@ -1,0 +1,135 @@
+[
+  {
+    "pergunta": "Qual é o país com mais títulos da Copa do Mundo de Futebol?",
+    "opcoes": [
+      "Alemanha",
+      "Itália",
+      "Brasil",
+      "Argentina"
+    ],
+    "correta": 2,
+    "categoria": "Conhecimentos Gerais"
+  },
+  {
+    "pergunta": "Quantos segundos tem uma hora?",
+    "opcoes": [
+      "3600",
+      "6000",
+      "1800",
+      "7200"
+    ],
+    "correta": 0,
+    "categoria": "Conhecimentos Gerais"
+  },
+  {
+    "pergunta": "Qual super-herói é conhecido como o 'Cavaleiro das Trevas'?",
+    "opcoes": [
+      "Homem-Aranha",
+      "Homem de Ferro",
+      "Batman",
+      "Superman"
+    ],
+    "correta": 2,
+    "categoria": "Entretenimento"
+  },
+  {
+    "pergunta": "Qual série tem personagens como Eleven e Demogorgon?",
+    "opcoes": [
+      "Dark",
+      "The Witcher",
+      "Stranger Things",
+      "Breaking Bad"
+    ],
+    "correta": 2,
+    "categoria": "Entretenimento"
+  },
+  {
+    "pergunta": "O que significa a sigla 'HTML'?",
+    "opcoes": [
+      "HighText Machine Language",
+      "HyperText Markup Language",
+      "HyperTransfer Machine Language",
+      "HyperText Markdown Language"
+    ],
+    "correta": 1,
+    "categoria": "Tecnologia"
+  },
+  {
+    "pergunta": "Qual desses é um sistema operacional?",
+    "opcoes": [
+      "Google",
+      "Linux",
+      "Python",
+      "USB"
+    ],
+    "correta": 1,
+    "categoria": "Tecnologia"
+  },
+  {
+    "pergunta": "Quantas casas tem o Castelo de Hogwarts (Harry Potter)?",
+    "opcoes": [
+      "2",
+      "3",
+      "4",
+      "5"
+    ],
+    "correta": 2,
+    "categoria": "Cultura Pop"
+  },
+  {
+    "pergunta": "Qual animal está estampado nas notas de R$200 do Brasil?",
+    "opcoes": [
+      "Onça",
+      "Tamanduá",
+      "Lobo-Guará",
+      "Capivara"
+    ],
+    "correta": 2,
+    "categoria": "Cultura Pop"
+  },
+  {
+    "pergunta": "Se 5 máquinas fazem 5 produtos em 5 minutos, quanto tempo 100 máquinas levam para fazer 100 produtos?",
+    "opcoes": [
+      "5 minutos",
+      "100 minutos",
+      "50 minutos",
+      "10 minutos"
+    ],
+    "correta": 0,
+    "categoria": "Raciocínio Lógico"
+  },
+  {
+    "pergunta": "Qual é o número que, se você virar de cabeça para baixo, continua o mesmo?",
+    "opcoes": [
+      "6",
+      "8",
+      "9",
+      "5"
+    ],
+    "correta": 1,
+    "categoria": "Raciocínio Lógico"
+  },
+  {
+    "pergunta": "Qual desses animais NÃO voa?",
+    "opcoes": [
+      "Morcego",
+      "Pinguim",
+      "Papagaio",
+      "Águia"
+    ],
+    "correta": 1,
+    "imagem": "pinguim.jpg",
+    "categoria": "Curiosidades"
+  },
+  {
+    "pergunta": "Quem pintou a Mona Lisa?",
+    "opcoes": [
+      "Van Gogh",
+      "Pablo Picasso",
+      "Leonardo da Vinci",
+      "Michelangelo"
+    ],
+    "correta": 2,
+    "categoria": "Conhecimentos Gerais"
+  }
+]
