@@ -16,6 +16,7 @@ fetch("perguntas_quiz.json")
     carregarPergunta();
   });
 
+  
 function carregarPergunta() {
   const pergunta = perguntas[indiceAtual];
   perguntaEl.innerText = pergunta.pergunta;
@@ -67,3 +68,5 @@ function mostrarResultado() {
 function embaralharArray(array) {
   return array.sort(() => Math.random() - 0.5);
 }
+
+

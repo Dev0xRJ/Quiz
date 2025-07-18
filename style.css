@@ -3,13 +3,42 @@ body {
   font-family: sans-serif;
   background: #03030e;
   color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
   margin: 0;
 }
 
+header {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 2rem;
+  z-index: 2;
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: #8d43dc;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+h3 {
+  font-size: 1.3rem;
+  color: #43dcd8;
+  margin-top: 0;
+  font-weight: normal;
+}
+
+#logo-img {
+  display: flex;
+  margin: 20px 2 40px 2; /* Espaço acima e abaixo, centralizado */
+  max-width: 180px;            /* Ajuste o tamanho conforme desejar */
+  animation: name duration timing-function delay iteration-count direction fill-mode;
+  
+}
 
 
 button {
@@ -32,7 +61,10 @@ button {
   box-shadow: 0 0 20px white;
   transition: box-shadow 0.5s;
   overflow: visible;
-}
+  margin-top: 200px;      /* Centralizado abaixo do header */
+  margin-left: auto;
+  margin-right: auto;
+} 
 
 .container::before {
   content: "";

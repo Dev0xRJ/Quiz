@@ -8,16 +8,20 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <header>
+    <h1>Quiz Master</h1>
+    <h3>Teste seus conhecimentos!</h3>
+  </header>
+
+  <img id="logo-img" src="img/Mente.png" alt="Logo do Quiz Master" />
+
   <div class="container">
-    <h1>Quiz: Teste seu conhecimento!</h1>
-    <div id="quiz">
-      <img id="imagemPergunta" src="img/Mente.png" alt="" style="max-width:100%; margin-bottom: 10px; display:none;">
       <p id="question">Carregando pergunta...</p>
       <div id="answers"></div>
       <button id="next">Próxima</button>
       <p id="score">Pontuação: 0</p>
+      <p id="reaction"></p>
     </div>
-  </div>
   <script src="script.js"></script>
 </body>
 </html>
