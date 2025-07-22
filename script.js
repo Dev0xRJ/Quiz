@@ -1,4 +1,3 @@
-
 let perguntas = [];
 let indiceAtual = 0;
 let pontuacao = 0;
@@ -8,6 +7,7 @@ const respostasEl = document.getElementById("answers");
 const imagemEl = document.getElementById("imagemPergunta");
 const scoreEl = document.getElementById("score");
 const btnProxima = document.getElementById("next");
+const reactionEl = document.getElementById("reaction");
 
 fetch("perguntas_quiz.json")
   .then(res => res.json())
@@ -16,14 +16,13 @@ fetch("perguntas_quiz.json")
     carregarPergunta();
   });
 
-  
 function carregarPergunta() {
   const pergunta = perguntas[indiceAtual];
   perguntaEl.innerText = pergunta.pergunta;
   respostasEl.innerHTML = "";
 
   if (pergunta.imagem) {
-    imagemEl.src = "imagens/" + pergunta.imagem;
+    imagemEl.src = "img/" + pergunta.imagem; // Corrigido aqui
     imagemEl.style.display = "block";
   } else {
     imagemEl.style.display = "none";
@@ -36,19 +35,41 @@ function carregarPergunta() {
     respostasEl.appendChild(btn);
   });
 
-  scoreEl.innerText = `Pontuação: ${pontuacao}`;
+  btnProxima.onclick = () => {
+    indiceAtual++;
+    if (indiceAtual < perguntas.length) {
+      carregarPergunta();
+    } else {
+      mostrarResultado();
+    }
+  };
+
+  scoreEl.innerText = `Pontuação: ${pontuacao}`; // Corrigido aqui
 }
 
 function selecionarResposta(index) {
   const correta = perguntas[indiceAtual].correta;
-  if (index === correta) pontuacao++;
 
-  indiceAtual++;
-  if (indiceAtual < perguntas.length) {
-    carregarPergunta();
+  // Reação com imagem
+  if (index === correta) {
+    pontuacao++;
+    reactionEl.innerHTML = `<img src="img/Cérebro Amigável com Sinal Verde.png" alt="Correto" style="height:40px;vertical-align:middle;"> <span style="color:lime;">Resposta correta!</span>`;
   } else {
-    mostrarResultado();
+    reactionEl.innerHTML = `<img src="img/Cérebro triste.png" alt="Errado" style="height:40px;vertical-align:middle;"> <span style="color:red;">Resposta errada!</span>`;
   }
+
+  // Desabilita os botões após resposta
+  Array.from(respostasEl.children).forEach(btn => btn.disabled = true);
+
+  setTimeout(() => {
+    reactionEl.innerHTML = "";
+    indiceAtual++;
+    if (indiceAtual < perguntas.length) {
+      carregarPergunta();
+    } else {
+      mostrarResultado();
+    }
+  }, 1200);
 }
 
 function mostrarResultado() {
@@ -62,11 +83,9 @@ function mostrarResultado() {
   reiniciar.onclick = () => location.reload();
   respostasEl.appendChild(reiniciar);
 
-  scoreEl.innerText = `Pontuação final: ${pontuacao}/${perguntas.length}`;
+  scoreEl.innerText = `Pontuação final: ${pontuacao}/${perguntas.length}`; // Corrigido aqui
 }
 
 function embaralharArray(array) {
   return array.sort(() => Math.random() - 0.5);
 }
-
-
