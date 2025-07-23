@@ -15,7 +15,8 @@
 
   <img id="logo-img" src="img/Mente.png" alt="Logo do Quiz Master" />
 
-  <div class="container">
+    <button id="start-quiz">Iniciar Quiz</button>
+  <div class="container" style="display:none;">
       <p id="question">Carregando pergunta...</p>
       <img id="imagemPergunta" src="img/Mente.png" alt="" style="max-width:100%; margin-bottom: 10px; display:none;">
       <div id="answers"></div>
@@ -23,6 +24,9 @@
           <p id="score">Pontuação: 0</p>
     </div>
       <p id="reaction"> </p>
+      <img id="feedback-img-true" src="img/Cérebro Amigável com Sinal Verde.png" alt="Feedback" style="display:none; max-width:200px;">
+      <img id="feedback-img-false" src="img/Cérebro triste.png" alt="Feedback" style="display:none; max-width:200px;">
+
   <script src="script.js"></script>
 </body>
 </html>

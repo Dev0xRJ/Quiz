@@ -9,6 +9,12 @@ const scoreEl = document.getElementById("score");
 const btnProxima = document.getElementById("next");
 const reactionEl = document.getElementById("reaction");
 
+document.getElementById('start-quiz').onclick = function() {
+  document.getElementById('start-quiz').style.display = 'none';
+  document.querySelector('.container').style.display = 'block';
+
+};
+
 fetch("perguntas_quiz.json")
   .then(res => res.json())
   .then(data => {
@@ -22,7 +28,7 @@ function carregarPergunta() {
   respostasEl.innerHTML = "";
 
   if (pergunta.imagem) {
-    imagemEl.src = "img/" + pergunta.imagem; // Corrigido aqui
+    imagemEl.src = "img/" + pergunta.imagem;
     imagemEl.style.display = "block";
   } else {
     imagemEl.style.display = "none";
@@ -44,13 +50,12 @@ function carregarPergunta() {
     }
   };
 
-  scoreEl.innerText = `Pontuação: ${pontuacao}`; // Corrigido aqui
+  scoreEl.innerText = `Pontuação: ${pontuacao}`; 
 }
 
 function selecionarResposta(index) {
   const correta = perguntas[indiceAtual].correta;
 
-  // Reação com imagem
   if (index === correta) {
     pontuacao++;
     reactionEl.innerHTML = `<img src="img/Cérebro Amigável com Sinal Verde.png" alt="Correto" style="height:40px;vertical-align:middle;"> <span style="color:lime;">Resposta correta!</span>`;
@@ -58,7 +63,6 @@ function selecionarResposta(index) {
     reactionEl.innerHTML = `<img src="img/Cérebro triste.png" alt="Errado" style="height:40px;vertical-align:middle;"> <span style="color:red;">Resposta errada!</span>`;
   }
 
-  // Desabilita os botões após resposta
   Array.from(respostasEl.children).forEach(btn => btn.disabled = true);
 
   setTimeout(() => {
